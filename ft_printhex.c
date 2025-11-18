@@ -6,7 +6,7 @@
 /*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:02:57 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/18 16:08:49 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:22:04 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ int	ft_printhex(unsigned int num, char hex)
 	len = 0;
 	if (hex == 'x')
 	{
+		//TDOD: putnbr/ itoa base 16 lowercar
 	}
 	else if (hex == 'X')
 	{
+		//TODO: pritnnber base 16 upercase
 	}
 	return (len);
 }
