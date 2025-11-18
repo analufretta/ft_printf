@@ -6,7 +6,7 @@
 /*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:29:27 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/18 16:20:46 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:28:28 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ static int	which_specifier(char specifier, va_list ap)
 		len = ft_printdiu(va_arg(ap, int));
 	if (specifier == 'x' || specifier == 'X')
 		len = ft_printhex(va_arg(ap, unsigned int), specifier);
-	//DONT'T FORGET THE %p FORMAT
+	//TODO:DONT'T FORGET THE %p FORMAT
 	return (len);
 }
