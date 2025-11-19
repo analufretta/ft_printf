@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printdiu.c                                      :+:      :+:    :+:   */
+/*   ft_printdi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:01:45 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/18 17:23:08 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:14:01 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_printdiu(int num)
+int	ft_printdi(long num)
 {
 	int len;
 
 	len = 0;
-	//TODO: printnbr (itoa?) base 10
+	if (num < 0)
+	{
+		num = num * (-1);
+		len += ft_printchar('-');
+	}
+	if (num > 9)
+		len += ft_printdi(num / 10);
+	len += ft_printchar(num % 10 + '0');
 	return(len);
 }
+

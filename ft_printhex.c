@@ -6,28 +6,54 @@
 /*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:02:57 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/18 17:22:04 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/19 15:55:50 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
+#include <stdio.h>
 
-int	ft_printhex(unsigned int num, char hex)
+int	ft_printchar(int c)
+{
+	return (write(1, &c, 1));
+}
+
+int	ft_printhex(unsigned long num, char hex)
 {
 	int		len;
 	char	*base_low;
 	char	*base_up;
 
+	len = 0;
 	base_low = "0123456789abcdef";
 	base_up = "0123456789ABCDEF";
-	len = 0;
-	if (hex == 'x')
+	if (num < 16)
 	{
-		//TDOD: putnbr/ itoa base 16 lowercar
+		if (hex == 'x')
+			len += ft_printchar(base_low[num]);
+		else if(hex == 'X')
+			len += ft_printchar(base_up[num]);
 	}
-	else if (hex == 'X')
+	else
 	{
-		//TODO: pritnnber base 16 upercase
+		len += ft_printhex(num / 16, hex);
+		len += ft_printhex(num % 16, hex);
 	}
-	return (len);
+	return(len);
+}
+
+int main(void)
+{
+	int len;
+	int prlen;
+
+	len = ft_printhex(452, 'x');
+	printf("\n");
+	prlen = printf("%x\n", 452);
+	ft_printhex(-452, 'X');
+	printf("\n");
+	printf("%X\n", -452);
+	printf("len: %d\n", len);
+	printf("len: %d\n", prlen);
+
 }

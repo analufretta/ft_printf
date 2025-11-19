@@ -6,7 +6,7 @@
 /*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:33:51 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/18 16:07:29 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:38:36 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@
 # include <stdint.h>
 # include <stdarg.h>
 
-int	ft_prinf(const char *formtat, ...);
+int	ft_printf(const char *formtat, ...);
 int	ft_printchar(int c);
-int	ft_printstr(char *str);
-int	ft_printdiu(int num);
-int	ft_printhex(unsigned int num, char hex);
+// int	ft_printstr(char *str);
+int	ft_printdi(long num);
+int	ft_printu(long nb);
+// int	ft_printhex(unsigned long num, char hex);
 
 #endif
