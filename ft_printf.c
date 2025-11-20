@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:29:27 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/19 17:03:19 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:43:24 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			count += which_specifier(*(format++), ap);
+			count += which_specifier(*(format++), ap); //FIXME
 			format++;
 		}
 		write(1, format, 1);
@@ -48,8 +48,10 @@ static int	which_specifier(const char specifier, va_list ap)
 		len = ft_printdi((long)va_arg(ap, int));
 	if ( specifier == 'u')
 		len = ft_printu((long)va_arg(ap, unsigned int));
-	// if (specifier == 'x' || specifier == 'X')
-	// 	len = ft_printuhex((long)va_arg(ap, unsigned int), specifier);
+	if (specifier == 'x' || specifier == 'X')
+		len = ft_printuhex((long)va_arg(ap, unsigned int), specifier);
+	if (specifier == 'p')
+		len = ft_printp(); //TODO
 	//TODO:DONT'T FORGET THE %p FORMAT
 	return (len);
 }
