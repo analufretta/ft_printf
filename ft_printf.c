@@ -6,7 +6,7 @@
 /*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:29:27 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/20 16:22:41 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:56:26 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			count += which_specifier(*(++format), ap); //FIXME
+			count += which_specifier(*(++format), ap);
 			format++;
 		}
 		write(1, format, 1);
@@ -42,8 +42,8 @@ static int	which_specifier(const char specifier, va_list ap)
 
 	if (specifier == 'c' || specifier == '%')
 		len = ft_printchar(va_arg(ap, int));
-	if (specifier == 's')
-		len = ft_printstr(va_arg(ap, char *));
+	// if (specifier == 's')
+	// 	len = ft_printstr(va_arg(ap, char *));
 	if (specifier == 'd' || specifier == 'i')
 		len = ft_printdi((long)va_arg(ap, int));
 	if ( specifier == 'u')

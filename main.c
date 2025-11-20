@@ -6,7 +6,7 @@
 /*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 16:14:33 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/20 16:32:08 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:55:28 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 
 int	main(void)
 {
-	char *str = NULL;
-	char str1[] = "Ana Luiza";
+	// char *str = NULL;
+	// char str1[] = "Ana Luiza";
+	
 	//char
 	printf("P Charachter: %c\n", 'c');
 	ft_printf("FT Charachter: %c\n", 'c');
 
-	//string
-	printf("P String NULL: %s\n", str);
-	ft_printf("FT String NULL: %s\n", str);
-	printf("P hello, %s\n", str1);
-	ft_printf("P hello, %s\n", str1);
+	// //string
+	// printf("P String NULL: %s\n", str);
+	// ft_printf("FT String NULL: %s\n", str);
+	// printf("P hello, %s\n", str1);
+	// ft_printf("P hello, %s\n", str1);
 	
 
 	//dig-int
