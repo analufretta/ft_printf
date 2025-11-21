@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:02:57 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/21 10:53:12 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 14:29:36 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
-#include <stdio.h>
+#include "ft_printf.h"
 
 int	ft_printhex(unsigned long num, char hex)
 {
@@ -26,7 +25,7 @@ int	ft_printhex(unsigned long num, char hex)
 	{
 		if (hex == 'x')
 			len += ft_printchar(base_low[num]);
-		else if(hex == 'X')
+		else if (hex == 'X')
 			len += ft_printchar(base_up[num]);
 	}
 	else
@@ -34,5 +33,5 @@ int	ft_printhex(unsigned long num, char hex)
 		len += ft_printhex(num / 16, hex);
 		len += ft_printhex(num % 16, hex);
 	}
-	return(len);
+	return (len);
 }

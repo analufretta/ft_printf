@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 15:56:49 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/21 10:16:06 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 14:29:28 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#include "ft_printf.h"
 
 int	ft_printstr(char *str)
 {
@@ -26,4 +26,3 @@ int	ft_printstr(char *str)
 		len += ft_printchar(*(str++));
 	return (len);
 }
-

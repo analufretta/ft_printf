@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+         #
+#    By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 11:29:21 by afretta-          #+#    #+#              #
-#    Updated: 2025/11/21 10:36:21 by afretta-         ###   ########.fr        #
+#    Updated: 2025/11/21 14:21:43 by afretta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libprintf.a
+NAME = libftprintf.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

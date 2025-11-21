@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 15:42:08 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/21 10:51:43 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 14:29:31 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#include "ft_printf.h"
 
 int	ft_printp(void *ptr)
 {
-	int len;
-	unsigned long addr;
+	int				len;
+	unsigned long	addr;
 
 	len = 0;
 	addr = (unsigned long) ptr;

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printdi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:01:45 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/19 16:14:01 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 14:29:47 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#include "ft_printf.h"
 
 int	ft_printdi(long num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (num < 0)
@@ -25,6 +25,5 @@ int	ft_printdi(long num)
 	if (num > 9)
 		len += ft_printdi(num / 10);
 	len += ft_printchar(num % 10 + '0');
-	return(len);
+	return (len);
 }
-
