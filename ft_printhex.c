@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:02:57 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/20 16:25:35 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 10:53:12 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,3 @@ int	ft_printhex(unsigned long num, char hex)
 	}
 	return(len);
 }
-
-// int main(void)
-// {
-// 	int len;
-// 	int prlen;
-
-// 	len = ft_printhex(452, 'x');
-// 	printf("\n");
-// 	prlen = printf("%x\n", 452);
-// 	ft_printhex(-452, 'X');
-// 	printf("\n");
-// 	printf("%X\n", -452);
-// 	printf("len: %d\n", len);
-// 	printf("len: %d\n", prlen);
-
-// }

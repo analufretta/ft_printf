@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:29:27 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/20 16:56:26 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/21 10:29:02 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,15 @@ static int	which_specifier(const char specifier, va_list ap)
 
 	if (specifier == 'c' || specifier == '%')
 		len = ft_printchar(va_arg(ap, int));
-	// if (specifier == 's')
-	// 	len = ft_printstr(va_arg(ap, char *));
+	if (specifier == 's')
+		len = ft_printstr(va_arg(ap, char *));
 	if (specifier == 'd' || specifier == 'i')
 		len = ft_printdi((long)va_arg(ap, int));
 	if ( specifier == 'u')
 		len = ft_printu((long)va_arg(ap, unsigned int));
 	if (specifier == 'x' || specifier == 'X')
 		len = ft_printhex((long)va_arg(ap, unsigned int), specifier);
-	// if (specifier == 'p')
-	// 	len = ft_printp(); //TODO
-	//TODO:DONT'T FORGET THE %p FORMAT
+	if (specifier == 'p')
+		len = ft_printp(va_arg(ap, void *));
 	return (len);
 }
