@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afretta- <afretta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afretta- <afretta-@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:02:57 by afretta-          #+#    #+#             */
-/*   Updated: 2025/11/21 14:29:36 by afretta-         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:51:50 by afretta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhex(unsigned long num, char hex)
+int	ft_printhex(long unsigned num, char hex)
 {
 	int		len;
 	char	*base_low;
