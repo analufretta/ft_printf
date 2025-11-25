@@ -20,6 +20,7 @@ It reproduces formatted output behavior for a selected set of specifiers and sup
 
 ## Project Structure
 
+``` bash
 .
 ├── ft_printf.c
 ├── ft_printf.h
